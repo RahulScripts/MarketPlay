@@ -1,0 +1,30 @@
+{
+  "name": "marketplay",
+  "version": "1.0.0",
+  "description": "open-source SDK for building Algorand-powered marketplaces.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RahulScripts/MarketPlay.git"
+  },
+  "keywords": [
+    "SDK",
+    "Algorand",
+    "Plug-n-Play",
+    "Decentralised-Marketplace",
+    "D-App",
+    "blockchain"
+  ],
+  "author": "Rahul Halli, Ritesh Katore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RahulScripts/MarketPlay/issues"
+  },
+  "homepage": "https://github.com/RahulScripts/MarketPlay#readme"
+}
