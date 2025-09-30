@@ -1,7 +1,7 @@
 import { Algodv2 } from 'algosdk'
 import { AlgorandClient } from '@algorandfoundation/algokit-utils'
 
-export class AssetManager {
+class AssetManager {
   private client: AlgorandClient
 
   constructor(client: AlgorandClient) {
@@ -30,3 +30,5 @@ export class AssetManager {
     })
   }
 }
+
+export { AssetManager }

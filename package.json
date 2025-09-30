@@ -26,5 +26,18 @@
   "bugs": {
     "url": "https://github.com/RahulScripts/MarketPlay/issues"
   },
-  "homepage": "https://github.com/RahulScripts/MarketPlay#readme"
+  "homepage": "https://github.com/RahulScripts/MarketPlay#readme",
+  "dependencies": {
+    "@algorandfoundation/algokit-utils": "^9.1.2",
+    "algokit": "^0.0.1",
+    "algosdk": "^3.5.2",
+    "commander": "^14.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.36.0",
+    "jest": "^30.2.0",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.28.13",
+    "typescript": "^5.9.2"
+  }
 }
