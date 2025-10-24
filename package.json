@@ -2,6 +2,7 @@
   "name": "marketplay",
   "version": "1.0.0",
   "description": "open-source SDK for building Algorand-powered marketplaces.",
+  "type": "module",
   "main": "index.js",
   "directories": {
     "example": "examples"

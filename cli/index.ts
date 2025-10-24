@@ -2,6 +2,7 @@
 import { Command } from 'commander'
 import { ContractManager } from '../src/core/contracts'
 
+import { getAlgorandClient } from '../client'
 const program = new Command()
 
 program
@@ -14,7 +15,7 @@ program
   .argument('<approval>', 'Approval TEAL file')
   .argument('<clear>', 'Clear TEAL file')
   .action(async (approval, clear) => {
-    const cm = new ContractManager(/* pass AlgorandClient */)
+    const cm = new ContractManager(getAlgorandClient('localnet'))
     const appId = await cm.deployApp(approval, clear, "CREATOR_ADDR")
     console.log(`✅ Contract deployed with App ID: ${appId}`)
   })

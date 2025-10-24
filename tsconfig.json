@@ -1,44 +1,41 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    /* === File Layout === */
+    "rootDir": "./src",              // all source code lives in /src
+    "outDir": "./dist",              // compiled JS output goes here
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    /* === Module + Target === */
+    "target": "ES2022",              // modern JS output
+    "module": "NodeNext",            // use Node's native ESM system
+    "moduleResolution": "NodeNext",  // required for NodeNext mode
+    "lib": ["ES2022"],               // modern language features
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    /* === Node Environment === */
+    "types": ["node"],               // enables Node types
+    "esModuleInterop": true,         // makes CJS imports smoother
+    "resolveJsonModule": true,       // allow importing JSON configs
 
-    // Stricter Typechecking Options
+    /* === Output Options === */
+    "sourceMap": true,               // generates .map files
+    "declaration": true,             // generates .d.ts type files
+    "declarationMap": true,          // link .d.ts to source maps
+    "removeComments": false,
+
+    /* === Type Safety === */
+    "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "skipLibCheck": true,
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
-
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    /* === Module Style === */
+    "verbatimModuleSyntax": true,    // keep import/export syntax as written
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+
+    /* === JSX (if needed) === */
+    "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
