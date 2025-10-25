@@ -220,21 +220,6 @@ const testnet = getAlgorandClient('testnet')
 // Localnet (development)
 const localnet = getAlgorandClient('localnet')
 ```
-
----
-
-## 📚 Examples
-
-Run the included examples to learn:
-
-```bash
-# Simple payment example
-npx ts-node examples/simple-payment.ts
-
-# Full marketplace example
-npx ts-node examples/basic-marketplace.ts
-```
-
 ---
 
 ## 🔧 Development
@@ -267,11 +252,8 @@ npm run docs
 - [x] Fixed-price marketplace
 - [x] Atomic transactions
 - [ ] Auction marketplace
-- [ ] Escrow smart contracts (TEAL)
 - [ ] NFT collections
-- [ ] Lazy minting
-- [ ] React UI components
-- [ ] GraphQL API integration
+- [ ] Examples
 
 ---
 
@@ -302,19 +284,10 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 ---
 
-## 💬 Support
-
-- GitHub Issues: [Report bugs or request features](https://github.com/RahulScripts/MarketPlay/issues)
-- Discord: [Join our community](https://discord.gg/algorand)
-- Twitter: [@MarketPlaySDK](https://twitter.com/marketplaysdk)
-
----
-
 ## 👨‍💻 Authors
 
 - **Rahul Halli** - [@RahulScripts](https://github.com/RahulScripts)
-- **Ritesh Katore** - [@riteshkatore](https://github.com/riteshkatore)
+- **Ritesh Katore** - [@rkdev19](https://github.com/rkdev19)
 
 ---
-
-**Built with ❤️ on Algorand**
+**Good Luck!**
