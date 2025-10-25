@@ -1,15 +1,27 @@
 {
   "name": "marketplay",
   "version": "1.0.0",
-  "description": "open-source SDK for building Algorand-powered marketplaces.",
+  "description": "Open-source SDK for building Algorand-powered marketplaces",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "directories": {
-    "example": "examples"
+    "example": "examples",
+    "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "docs": "typedoc --entryPoints index.ts --out docs",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write \"src/**/*.ts\" \"examples/**/*.ts\"",
+    "example:payment": "tsx examples/simple-payment.ts",
+    "example:marketplace": "tsx examples/basic-marketplace.ts",
+    "clean": "rm -rf dist docs coverage",
+    "prepublishOnly": "npm run clean && npm run build && npm test"
   },
   "repository": {
     "type": "git",
@@ -18,10 +30,14 @@
   "keywords": [
     "SDK",
     "Algorand",
-    "Plug-n-Play",
-    "Decentralised-Marketplace",
-    "D-App",
-    "blockchain"
+    "Blockchain",
+    "NFT",
+    "Marketplace",
+    "Web3",
+    "Crypto",
+    "DeFi",
+    "Smart Contracts",
+    "TypeScript"
   ],
   "author": "Rahul Halli, Ritesh Katore",
   "license": "MIT",
@@ -31,15 +47,28 @@
   "homepage": "https://github.com/RahulScripts/MarketPlay#readme",
   "dependencies": {
     "@algorandfoundation/algokit-utils": "^9.1.2",
-    "algokit": "^0.0.1",
-    "algosdk": "^3.5.2",
-    "commander": "^14.0.1"
+    "algosdk": "^3.5.2"
   },
   "devDependencies": {
+    "@types/node": "^24.6.0",
+    "commander": "^14.0.1",
     "eslint": "^9.36.0",
     "jest": "^30.2.0",
+    "prettier": "^3.0.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.0.0",
     "typedoc": "^0.28.13",
     "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }

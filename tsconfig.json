@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     /* === File Layout === */
-    "rootDir": "./src",              // all source code lives in /src
+    "rootDir": ".",              // all source code lives in /src
     "outDir": "./dist",              // compiled JS output goes here
 
     /* === Module + Target === */
@@ -36,6 +36,6 @@
     /* === JSX (if needed) === */
     "jsx": "react-jsx"
   },
-  "include": ["src"],
+  "include": ["src", "index.ts"],
   "exclude": ["node_modules", "dist"]
 }
